@@ -2,8 +2,9 @@
 #include <iostream>
 
 int main() {
-    Universe u { 3, 9, false };
-    u.print();
+    std::unique_ptr<Universe> uv { pUniverse_create(6, 12, false) };
+    std::cout << "Printing rows..." << std::endl;
+    u_printMembers(uv);
 
     return 0;
 }
